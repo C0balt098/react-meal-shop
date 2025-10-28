@@ -5,7 +5,7 @@ const getMealById = async (mealId) => {
   const meal = await res.json();
   return meal;
 };
-//www.themealdb.com/api/json/v1/1/categories.php
+
 const getAllCategories = async () => {
   const res = await fetch(API_URL + `categories.php`);
   const meals = await res.json();

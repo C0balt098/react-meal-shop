@@ -10,7 +10,13 @@ function Home() {
     });
   }, []);
   return (
-    <>{catalog.length === 0 ? <Preloader /> : <CategoryList catalog={catalog} />}</>
+    <>
+      {catalog.length === 0 ? (
+        <Preloader />
+      ) : (
+        <CategoryList catalog={catalog} />
+      )}
+    </>
   );
 }
 

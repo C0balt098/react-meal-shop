@@ -5,7 +5,8 @@ import {Home} from "./pages/Home.jsx";
 import {About} from "./pages/About";
 import {Contact} from "./pages/Contact";
 import {NotFound} from "./pages/NotFound.jsx";
-// import {Movies} from "./pages/Movies.jsx";
+import {Category} from "./pages/Category.jsx";
+
 function App() {
   return (
     <div className="App">
@@ -16,7 +17,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contacts" element={<Contact />} />
-            {/* <Route path="/movies" element={<Movies />} /> */}
+            <Route path="/category/:name" element={<Category />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
