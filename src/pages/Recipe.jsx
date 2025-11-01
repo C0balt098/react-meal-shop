@@ -47,16 +47,18 @@ const Recipe = () => {
           </table>
           {recipe.strYoutube ? (
             <div className="row">
-              <h5>
-                Video recipe
-                <iframe
-                  title={`video`}
-                  src={`https://www.youtube.com/embed/${recipe.strYoutube.slice(
-                    -11
-                  )}`}
-                  allowFullScreen
-                />
-              </h5>
+              <div className="video-section">
+                <h5>Video recipe</h5>
+                <div className="video-container">
+                  <iframe
+                    title={`video-recipe-${recipe.idMeal}`}
+                    src={`https://www.youtube.com/embed/${recipe.strYoutube.slice(
+                      -11
+                    )}`}
+                    allowFullScreen
+                  />
+                </div>
+              </div>
             </div>
           ) : null}
         </div>
